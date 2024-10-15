@@ -279,14 +279,25 @@
 //   }
 
 //   // console.log(key, obj[key], typeof obj[key]);
-// }
+// // }
 
-// const person = {
+// const person1 = {
 //   named: "mudasir",
 //   age: 19,
 //   phone: 923068745216,
 //   address: "karachi",
 // };
+
+// const person2 = {
+//   named: "mudasir",
+//   age: 19,
+//   phone: 923068745216,
+//   address: "karachi",
+// };
+
+// const name = "mobin";
+// const name1 = "mobin";
+// console.log(name == name1);
 
 // showProperties(person);
 // function showProperties(obj) {
@@ -431,5 +442,37 @@
 //     console.log("draw");
 //   },
 // };
+// ......,,,,,,,,,END/////
 
-////\ repository banali
+//camel notation : oneTwoThreeFour. jis k bad har word ka first leter capital hooo;
+
+//pascal notation : OneTwoThreeFour. jis k har word ka first leter capital hoo;
+
+//\ repository banali
+
+//========constructor function========//
+
+//
+//function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function () {
+//     console.log("draw ");
+//   };
+// }
+
+// const circle = new Circle(1);
+// console.log(1);
+
+//=======dynamic nature of object========//.
+
+let circle = {
+  radius: 1,
+};
+circle.game = "pubg";
+circle.color = "blue  yellow black";
+circle.draw = function () {};
+circle.name = "mudassir ";
+// delete circle.color;
+// delete circle.radius;
+// delete circle.draw;
+console.log(circle);
