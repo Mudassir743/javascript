@@ -453,15 +453,7 @@
 //========constructor function========//
 
 //
-//function Circle(radius) {
-//   this.radius = radius;
-//   this.draw = function () {
-//     console.log("draw ");
-//   };
-// }
-
-// const circle = new Circle(1);
-// console.log(1);
+//+++====   ===≠≠≠≠≠≠≠z===s===s--
 
 //=======dynamic nature of object========//.
 
@@ -476,3 +468,21 @@
 // // delete circle.radius;
 // // delete circle.draw;
 // console.log(circle);
+
+//======constructor property======//
+
+// new String(); //"",'',``:
+// new Boolean(); // true ,false :
+// new Number(); //1,2,3,4,,,,,,
+
+//=====value v/s refrance ======//
+
+let obj = { value: 10 };
+
+function increase(obj) {
+  obj.value++;
+}
+
+increase(obj);
+
+console.log(obj);
