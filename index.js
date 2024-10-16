@@ -427,12 +427,12 @@
 //   },
 // };
 
-// let circle2 = {
+// raw");
+//   },let circle2 = {
 //   radius: 1,
 //   color: "blue",
 //   draw() {
-//     console.log("draw");
-//   },
+//     console.log("d
 // };
 
 // let circle3 = {
@@ -477,12 +477,34 @@
 
 //=====value v/s refrance ======//
 
-let obj = { value: 10 };
+// let obj = { value: 17 };
 
-function increase(obj) {
-  obj.value++;
+// function increase(obj) {
+//   obj.value++;
+// }
+
+// increase(obj);
+
+// console.log(obj);
+
+//=======================Enumerating properties of an object======================//
+
+let circle = {
+  radius: 1,
+  color: "red",
+  draw() {
+    console.log("draw");
+  },
+};
+for (let key in circle) {
+  console.log(key, circle[key]);
+}
+for (let key of Object.keys(circle)) {
+  console.log(key);
 }
 
-increase(obj);
-
-console.log(obj);
+for (let entry of Object.entries(circle)) {
+  console.log(entry);
+}
+if ("color" in circle);
+console.log(" yes ");
