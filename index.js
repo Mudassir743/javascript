@@ -465,14 +465,14 @@
 
 //=======dynamic nature of object========//.
 
-let circle = {
-  radius: 1,
-};
-circle.game = "pubg";
-circle.color = "blue  yellow black";
-circle.draw = function () {};
-circle.name = "mudassir ";
-// delete circle.color;
-// delete circle.radius;
-// delete circle.draw;
-console.log(circle);
+// let circle = {
+//   radius: 1,
+// };
+// circle.game = "pubg";
+// circle.color = "blue  yellow black";
+// circle.draw = function () {};
+// circle.name = "mudassir ";
+// // delete circle.color;
+// // delete circle.radius;
+// // delete circle.draw;
+// console.log(circle);
