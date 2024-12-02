@@ -489,22 +489,22 @@
 
 //=======================Enumerating properties of an object======================//
 
-let circle = {
-  radius: 1,
-  color: "red",
-  draw() {
-    console.log("draw");
-  },
-};
-for (let key in circle) {
-  console.log(key, circle[key]);
-}
-for (let key of Object.keys(circle)) {
-  console.log(key);
-}
+// let circle = {
+//   radius: 1,
+//   color: "red",
+//   draw() {
+//     console.log("draw");
+//   },
+// };
+// for (let key in circle) {
+//   console.log(key, circle[key]);
+// }
+// for (let key of Object.keys(circle)) {
+//   console.log(key);
+// }
 
-for (let entry of Object.entries(circle)) {
-  console.log(entry);
-}
-if ("color" in circle);
-console.log(" yes ");
+// for (let entry of Object.entries(circle)) {
+//   console.log(entry);
+// }
+// if ("color" in circle);
+// console.log(" yes ");
