@@ -151,6 +151,16 @@
 // }
 // checkSpeed(113);
 
+// //============ even and odd ============//
+
+// function showNumber(limit) {
+//   for (let i = 0; i <= limit; i++) {
+//     if (i % 2 === 0) console.log(i, "EVEN");
+//     else console.log(i, "ODD");
+//   }
+// }
+// showNumber(10);
+
 // ///////TO REPEAT///// uper side .........
 
 //persentage /; /////// WALA/
@@ -665,5 +675,3 @@
 // }
 // if ("color" in circle);
 // console.log(" yes ");
-
-removeEventListener;
