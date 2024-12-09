@@ -153,13 +153,16 @@
 
 // //============ even and odd ============//
 
-// function showNumber(limit) {
-//   for (let i = 0; i <= limit; i++) {
-//     if (i % 2 === 0) console.log(i, "EVEN");
-//     else console.log(i, "ODD");
-//   }
-// }
-// showNumber(10);
+showNumber(10);
+function showNumber(limit) {
+  for (let i = 0; i <= limit; i++) {
+    //if (i % 2 === 0) console.log(i, "EVEN");
+    //else console.log(i, "ODD");
+    //
+    const message = i % 2 === 0 ? "EVEN" : "ODD";
+    console.log(i, message);
+  }
+}
 
 // ///////TO REPEAT///// uper side .........
 
