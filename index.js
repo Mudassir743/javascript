@@ -1,14 +1,172 @@
-//let number = 9
+// let x = 10;
+// let y = x > 5 && x < 15;
+// console.log(y);
 
-// if (number>=40){
-//     console .log("you are best")
-// } else if (number>=30){
-//     console.log("you are good ")
-// }else if (number>=25) {
-//     console.log("you are ok ")
-// }else {(number >=10)
-//     console.log("you are not good ")
+// // let x = 5;
+// x += 3;
+// console.log(x);
+
+// let x = 1;
+// let y = x !== 2;
+// console.log(y);
+
+// //IF...ELSE //
+
+// let hour = 13;
+// if (hour >= 6 && hour < 12) {
+//   console.log("GOOD MORNING");
+// } else if (hour >= 12 && hour < 18) {
+//   console.log("GOOD AFTERNOON");
+// } else console.log("GOOD EVENING");
+
+// //  function====== first time =======//
+// function greet(name, lastNmae) {
+//   console.log("hello  " + name + " " + lastNmae);
+// }
+// greet("ahmed ", 'mudassir"');
+// greet("MUDASSIR ", "AHMED");
+
+// function square(number) {
+//   return number * number;
+// }
+// let number = square(10);
+// // console.log(number);
+// //
+// let a = "red";
+// let b = "blue";
+// let c = a;
+// a = b;
+// b = c;
+
+// console.log(a);
+// console.log(b);
+
+//LOOPS AGAIN///============for loop is good buddy.//////////if (i % 2 !== 0)//////// even odd code
+
+// for (let i = 1; i <= 10; i++) {
+//   if (i % 2 !== 0) console.log(i);
+// }
+
+// // // while loop
+
+// let i = 0;
+// while (i <= 10) {
+//   if (i % 2 !== 0) console.log(i);
+//   i++;
+// }
+
+// // DO WHILE LOOP
+// let i = 35;
+// do {
+//   if (i % 2 !== 0) console.log(i);
+//   i++;
+// } while (i <= 5);
+
+//FOR IN LOOP =======//
+
+// const person = {
+//   name: "ali",
+//   age: 20,
 // };
+// for (key in person) {
+//   console.log(key, person[key]);
+// }
+
+// const colors = [" blue", "green", "red"];
+
+// for (let index in colors) {
+//   console.log(index, colors[index]);
+// }
+// //=====FOR OF LOOP=======
+// const colors = ["blue", "green", "red"];
+
+// for (let color of colors) {
+//   console.log(color);
+// }
+
+// // BREAK AND CONTINUE LOOP //======
+// let i = 0;
+// while (i <= 10) {
+//   //if (i === 5) break;
+//   if (i % 2 === 0) {
+//     i++;
+//     continue;
+//   }
+//   console.log(i);
+//   i++;
+// }
+// //EXERCISE MAX NUMBER ///
+// function max(a, b) {
+//   if (a > b) return a;
+//   return b;
+// }
+// // console.log(max(34, 5));
+// function landscap(width, height) {
+//   return width > height;
+// }
+// console.log(landscap(10, 20));
+
+// function fizzBuzz(input) {
+// logic
+// agr to 3 se divisible ha === fizz
+// agr to 5 se divisible ha === buzz
+// agr to 5 se or 3 se bhi divisible ha === fizzBuzz
+// agr dono se nahi to wohi number wapis return
+// agr wioh number hi nahi hai to return "NOT A NUMBER"
+
+// function fizzBuzz(input) {
+//   if (typeof input !== "number") return " not a number ";
+//   if (input % 5 === 0 && input % 3 === 0) return "fizzBuzz";
+//   if (input % 3 === 0) return "fizz";
+//   if (input % 5 === 0) return " Buzz";
+//   else return input;
+// }
+// console.log(fizzBuzz("fahad bhai"));
+
+// speedlimit= 70
+// speed 5->1 point
+// math.floor (1.3)
+// // 12 point->  license suspended;
+// function checkSpeed(speed) {
+//   const speedlimit = 70;
+//   const kmperPoint = 5;
+//   if (speed <= speedlimit) console.log("ok");
+//   else {
+//     const point = Math.floor((speed - speedlimit) / kmperPoint);
+//     if (point >= 12) console.log("license suspended");
+//     else console.log("points", point);
+//   }
+// }
+// checkSpeed(80);
+
+// function checkSpeed(speed) {
+//   const speedlimit = 70;
+//   const kmperPoint = 5;
+//   if (speed <= speedlimit) console.log("ok");
+//   else {
+//     const point = Math.floor((speed - speedlimit) / kmperPoint);
+//     if (point >= 12) console.log(" license suspended");
+//     else console.log("points", point);
+//   }
+// }
+// checkSpeed(113);
+gitadd;
+
+// ///////TO REPEAT///// uper side .........
+
+//persentage /; /////// WALA/
+
+// let number = 26;
+// if (number >= 40) {
+//   console.log("you are best");
+// } else if (number >= 30) {
+//   console.log("you are good ");
+// } else if (number >= 25) {
+//   console.log("you are ok ");
+// } else {
+//   number >= 10;
+//   console.log("you are not good ");
+// }
 
 // // let rule = "moderator";
 
@@ -25,12 +183,12 @@
 // //     console.log("Unknown User");
 // // }
 
-// // let role = "";
+// // let rule = "";
 
-// // if (role === "guest") console.log("hamara jani guest hai");
+// // if (rule === "guest") console.log("hamara jani gu est hai");
 // // else console.log("hamara jani unknown hai");
 
-// // =====================TERNARY OPERATOR=================
+// // =====================TERNARY OPERATOR============ =====
 
 // // let banda = "gut";
 
@@ -38,7 +196,7 @@
 // //   ? console.log("jani guest hai bhai")
 // //   : console.log("jani pata nahi kon hia");
 
-// // +==================== for loop ====================+
+// // +==================== for loop ================== ==+
 
 // // loops start ===========*
 // // for loops:
@@ -49,7 +207,7 @@
 // // there are loops//-----------
 
 // // for loops;
-// // initialExpression = i ;
+// // // initialExpression = i ;
 
 // for (let i = 0; i < 5; i++) {
 //   console.log("Ali", i);
@@ -487,7 +645,7 @@
 
 // console.log(obj);
 
-//=======================Enumerating properties of an object======================//
+// //=======================Enumerating properties of an object======================//
 
 // let circle = {
 //   radius: 1,
