@@ -150,7 +150,6 @@
 //   }
 // }
 // checkSpeed(113);
-gitadd;
 
 // ///////TO REPEAT///// uper side .........
 
@@ -666,3 +665,5 @@ gitadd;
 // }
 // if ("color" in circle);
 // console.log(" yes ");
+
+removeEventListener;
