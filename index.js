@@ -106,6 +106,8 @@
 // }
 // console.log(landscap(10, 20));
 
+//==========FizzBuzz==========//
+
 // function fizzBuzz(input) {
 // logic
 // agr to 3 se divisible ha === fizz
@@ -122,7 +124,7 @@
 //   else return input;
 // }
 // console.log(fizzBuzz("fahad bhai"));
-
+//========== demerit popint==========//
 // speedlimit= 70
 // speed 5->1 point
 // math.floor (1.3)
@@ -153,16 +155,16 @@
 
 // //============ even and odd ============//
 
-showNumber(10);
-function showNumber(limit) {
-  for (let i = 0; i <= limit; i++) {
-    //if (i % 2 === 0) console.log(i, "EVEN");
-    //else console.log(i, "ODD");
-    //
-    const message = i % 2 === 0 ? "EVEN" : "ODD";
-    console.log(i, message);
-  }
-}
+// showNumber(100);
+// function showNumber(limit) {
+//   for (let i = 0; i <= limit; i++) {
+//     //if (i % 2 === 0) console.log(i, "EVEN");
+//     //else console.log(i, "ODD");
+//     //
+//     const message = i % 2 === 0 ? "EVEN " : " ODD";
+//     console.log(i, message);
+//   }
+// }
 
 // ///////TO REPEAT///// uper side .........
 
