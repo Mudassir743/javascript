@@ -164,9 +164,33 @@
 //     const message = i % 2 === 0 ? "EVEN " : " ODD";
 //     console.log(i, message);
 //   }
+// //}
+// const array = [null, "hello ", 0];
+// console.log(countTruthy(array));
+// function countTruthy(array) {
+//   let count = 0;
+//   for (let value of array) if (value) count++;
+//   return count;
 // }
+//≈≈≈≈≈≈≈≈≈≈≈string properties≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
 
-// ///////TO REPEAT///// uper side .........
+// const movie = {
+//   title: "ram page",
+//   releaseYear: 2020,
+//   rating: 4.5,
+//   director: " jake ",
+// };
+// function showProperties(obj) {
+//   for (key in obj) {
+//     if (typeof obj[key] === "string") {
+//       console.log(" THIS IS A STRING ", obj[key]);
+//     } else if (typeof obj[key] === "number") {
+//       console.log(" THIS IS A NUMBER  ", obj[key]);
+//     }
+//   }
+// }
+//showProperties(movie);
+///////TO REPEAT///// uper side .........
 
 //persentage /; /////// WALA/
 
@@ -410,7 +434,7 @@
 
 // count truthy//
 
-// const array = [null, undefined, NaN, false];
+// const array = [null, undefined, NaN, false, 2, 3];
 
 // console.log(countTruthy(array));
 
@@ -421,26 +445,26 @@
 // }
 
 // {
-//   const array = [5, 4, null, undefined, false, , , ,];
+//   const array = ["hello " , null, NaN , undifine];
 //   console.log(countTurethy(array));
+
+//   function countTurethy(array) {
+//     let count = 0;
+
+//     for (let value of array) if (value) count++;
+//     return count;
+//   }
 // }
-// function countTurethy(array) {
-//   let count = 0;
+// //  Object String
 
-//   for (let value of array) if (value) count++;
-//   return count;
-// }
+// // const movie = {
+// //   tittle: "A",
+// //   releaseYear: 2018,
+// //   rating: 4.5,
+// //   director: "B",
+// // };
 
-//  Object String
-
-// const movie = {
-//   tittle: "A",
-//   releaseYear: 2018,
-//   rating: 4.5,
-//   director: "B",
-// };
-
-// showProperties(movie);
+// // showProperties(movie);
 // function showProperties(obj) {
 //   for (let key in obj) {
 //     if (typeof obj[key] === "string") {
@@ -449,6 +473,7 @@
 //       console.log("THIS IS A NUMBER VALUE ==> ", obj[key]);
 //     }
 //   }
+// }
 
 //   // console.log(key, obj[key], typeof obj[key]);
 // // }
