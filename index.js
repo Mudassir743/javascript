@@ -1,6 +1,6 @@
-// let x = 10;
 // let y = x > 5 && x < 15;
 // console.log(y);
+// let x = 10;
 
 // // let x = 5;
 // x += 3;
@@ -13,7 +13,6 @@
 // //IF...ELSE //
 
 // let hour = 13;
-// if (hour >= 6 && hour < 12) {
 //   console.log("GOOD MORNING");
 // } else if (hour >= 12 && hour < 18) {
 //   console.log("GOOD AFTERNOON");
@@ -30,11 +29,11 @@
 //   return number * number;
 // }
 // let number = square(10);
+// if (hour >= 6 && hour < 12) {
 // // console.log(number);
 // //
 // let a = "red";
 // let b = "blue";
-// let c = a;
 // a = b;
 // b = c;
 
@@ -42,13 +41,13 @@
 // console.log(b);
 
 //LOOPS AGAIN///============for loop is good buddy.//////////if (i % 2 !== 0)//////// even odd code
+// let c = a;
 
 // for (let i = 1; i <= 10; i++) {
 //   if (i % 2 !== 0) console.log(i);
 // }
 
 // // // while loop
-
 // let i = 0;
 // while (i <= 10) {
 //   if (i % 2 !== 0) console.log(i);
@@ -76,6 +75,7 @@
 
 // for (let index in colors) {
 //   console.log(index, colors[index]);
+
 // }
 // //=====FOR OF LOOP=======
 // const colors = ["blue", "green", "red"];
@@ -193,14 +193,257 @@
 
 //  ≈≈≈≈≈≈≈≈≈≈≈≈sum of multiples ≈≈≈≈≈≈≈≈≈≈≈≈
 
-function sum(limit) {
-  let sum = 0;
-  for (let i = 0; i < limit; i++) {
-    if (i % 3 == 0 || i % 5 == 0);
-  }
-}
-console.log(sum(10));
+// function sum(limit) {
+//   let sum = 0;
+//   for (let i = 0; i <= limit; i++) {
+//     if (i % 3 === 0 || i % 5 === 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
 
+// console.log(sum(10));
+
+// 50 - 59 = F
+// 60 - 69 = D
+// 70 - 79 = C
+// 80 - 89 = B
+// 90 - 100= A
+
+// const marks = [6];
+// console.log(calculateGrade(marks));
+// function calculateGrade(marks) {
+//   let average = calculatAverage(marks);
+//   if (average < 60) return "F";
+//   if (average < 70) return "D";
+//   if (average < 80) return "C";
+//   if (average < 90) return "B";
+//   return "A";
+// }
+// function calculatAverage(array) {
+//   let sum = 0;
+//   for (let value of array) sum += value;
+//   return sum / array.length;
+// }
+
+// showStar();
+// function showStar(row) {
+//   for (let row = 10; row >= 1; row--) {
+//     let star = "  ";
+//     for (let summ = 0; summ < row; summ++) star += "8";
+//     console.log(star);
+//   }
+// }
+
+// showStar(10);
+// function showStar(row) {
+//   for (let row = 0; row < 10; row++) {
+//     let pattern = "";
+//     for (let num = 0; num <= row; num++) pattern += " *";
+//     console.log(pattern);
+//   }
+// }
+
+//  ================================ prime function ================================
+
+// showPrime(20);
+// function showPrime(limit) {
+//   for (let number = 2; number <= limit; number++) {
+//     if (isPrime(number)) console.log(number);
+//   }
+// }
+// function isPrime(number) {
+//   for (let factor = 2; factor <
+//     number; factor++) {
+//     if (number % factor === 0) return false;
+//   }
+//   return true;
+// }
+
+// showPrime(40);
+// function showPrime(limit) {
+//   for (let numbe) console.log(isPrime(number));
+//   }r = 2; number <= limit; number++) {
+//     if (isPrime(number)) console.log(number);
+//   }
+// }
+// function isPrime(number) {
+//   for (let factor = 2; factor < number; factor++) {
+//     if (number % factor === 0) return false;
+//   }
+//   return true;
+// }
+//  function ishowPrime( number ){
+//    for (let )
+// //  }
+// showPrime(20);
+// function showPrime(limit) {
+//   for (let number = 2; number <= limit; number++) {
+//     if (isPrime(number)) console.log(number);
+//   }
+// }
+
+// function isPrime(number) {
+//   for (let factor = 2; factor < number; factor++) {
+//     if (number % factor === 0) return false;
+//   }
+// // return true;
+// // }
+// showPrime(10);
+// function showPrime(limit) {
+//   for (let number = 2; number <= limit; number++) {
+//     if (isPrime(number)) console.log(number);
+//   }
+// }
+// function isPrime(number) {
+//   for (let factor = 2; factor < number; factor++) {
+//     if (number % factor === 0) return false;
+//   }
+//   return true;
+// }
+// ========≠≠≠≠≠≠≠=============  prime number ================≠≠≠≠===========
+
+// =============================== basic of factory function ========================
+//  object= oriented programming( OOP )_______----------===
+
+// let circle = {
+//   radius: 1,
+//   location: {
+//     x: 1,
+//     y: 1,
+//   },
+//   isVisible: true,
+//   draw: function () {
+//     console.log(this.isVisible);
+//   },
+// };
+// circle.draw();
+
+//  ++++++++=================factory function ++++++++=================
+// function creatCircle(radius) {
+//   return {
+//     radius,
+//     draw() {
+//       console.log("draw");
+//     },
+//   };
+// }
+// const circle1 = creatCircle(1);
+// console.log(circle1);
+// const circle2 = creatCircle(2);
+// console.log(circle2);
+
+//  ================exercise================== functions constructor & factory==============
+function createAddress(street, city, zipcode) {
+  return {
+    street: street,
+    city: city,
+    zipcode: zipcode,
+  };
+}
+const address1 = createAddress("39", "kashmir", "7532");
+console.log(address1);
+console.log("++++++++++=========++++++++++");
+function Address(street, city, zipcode) {
+  this.street = street;
+  this.city = city;
+  this.zipcode = zipcode;
+}
+const address = new Address("29", "karachi ", "7354");
+console.log(this.city, address);
+// // ======================= constructor function ========================
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.getCircumference = function () {
+//     console.log("Circumference is ==> ", 2 * Math.PI * this.radius);
+//   };
+//   this.getDiameter = function () {
+//     console.log("Diameter is ==> ", 2 * this.radius);
+//   };
+//   this.getRadius = function () {
+//     console.log("Radius is ==> ", this.radius);
+//   };
+// }
+// const circle1 = new Circle(5);
+// const circle2 = new Circle(10);
+// const circle3 = new Circle(20);
+// console.log("For Circle1");
+// circle1.getCircumference();
+// circle1.getDiameter();
+// circle1.getRadius();
+// console.log("===============");
+// console.log("For Circle2");
+// circle2.getCircumference();
+// circle2.getDiameter();
+// circle2.getRadius();
+// console.log("===============");
+// console.log("For Circle2");
+// circle3.getCircumference();
+// circle3.getDiameter();
+// circle3.getRadius();
+// ============================================================
+// console.log(this.sides * this.sideLength);
+// function Square(length) {
+//   this.length = length;
+//   this.getSquarearea = function () {
+//     console.log(" Squarearea is ===>", this.length * 4);
+//   };
+//   this.getSquare = function () {
+//     console.log(" Square is ===> ", this.length);
+//   };
+// }
+// const square1 = new Square(100);
+// const square2 = new Square(5);
+
+// console.log("square1");
+// square1.getSquarearea();
+// square1.getSquare();
+// console.log("===============");
+// console.log("Square2");
+// square2.getSquarearea();
+// square2.getSquare();
+
+// function Student(name, last, age, clas) {
+//   this.firstName = name;
+//   this.lastName = last;
+//   this.age = age;
+//   this.clas = clas;
+// }
+// const student1 = new Student(" mudassir ", " ahmed", 19, 12);
+// console.log(student1);
+// const student2 = new Student(" asim ", " madni", 17, 11);
+// console.log(student2);
+// const student3 = new Student(" hassan  ", " ali", 20, 10);
+// console.log(student3);
+
+// -=========================================grade ///
+// let score = 10;
+// let grade = "THIS IS YOUR GRADE ";
+// if (score >= 90 && score <= 100) {
+//   console.log(grade, "A");
+// } else if (score >= 80 && score <= 89) {
+//   console.log(grade, "B");
+// } else if (score >= 70 && score <= 79) {
+//   console.log(grade, "C");
+// } else if (score >= 60 && score <= 69) {
+//   console.log(grade, "D");
+// } else if (score >= 0 && score <= 59) {
+//   grade, "F";
+// // }
+// let i = 100;
+// for (let i = 0; i <= 100; i++) {
+//   if (i % 2 === 0) console.log(i, "EVEN ");
+//   // else console.log(i, "odd");
+// }
+
+// // g = 9.8;
+// g = 8;
+// console.log(g);
+
+// array is argument ==== divided  / array.lenght === average formola=====
+// marks is parameter
+//total;
 ///////TO REPEAT///// uper side .........
 
 //persentage /; /////// WALA/
@@ -514,9 +757,9 @@ console.log(sum(10));
 //       console.log("THIS IS VALUE OF STRING ===>", obj[key]);
 //     } else if (typeof obj[key] === "number") {
 //       console.log("THIS IS VALUE OF NUMBER ===>", obj[key]);
+// x}
 //     }
 //   }
-// }
 
 // sum of multiple
 // function sum(limit) {
@@ -524,9 +767,9 @@ console.log(sum(10));
 //   for (let i = 0; i <= limit; i++) {
 //     if (i % 3 === 0 || i % 5 === 0);
 //     sum += i;
-//   }
+//  x }
 //   return sum;
-// }
+// x}
 // console.log(sum(10));
 
 // 50 - 59 = F
@@ -561,7 +804,7 @@ console.log(sum(10));
 //   for (let row = 1; row <= rows; ++row) {
 //     let pettern = "";
 //     for (let i = 1; i <= row; ++i) {
-//       pettern += "! ";
+//       pettern += "* ";
 //     }
 //     console.log(pettern);
 //   }
