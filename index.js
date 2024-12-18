@@ -344,14 +344,14 @@ function createAddress(street, city, zipcode) {
 }
 const address1 = createAddress("39", "kashmir", "7532");
 console.log(address1);
-console.log("++++++++++=========++++++++++");
+console.log("=======================>>>>");
 function Address(street, city, zipcode) {
   this.street = street;
   this.city = city;
   this.zipcode = zipcode;
 }
-const address = new Address("29", "karachi ", "7354");
-console.log(this.city, address);
+const addressMdassir = new Address("29", "karachi ", "7354");
+console.log(addressMudassir);
 // // ======================= constructor function ========================
 // function Circle(radius) {
 //   this.radius = radius;
