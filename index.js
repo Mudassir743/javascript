@@ -335,23 +335,23 @@
 // console.log(circle2);
 
 //  ================exercise================== functions constructor & factory==============
-function createAddress(street, city, zipcode) {
-  return {
-    street: street,
-    city: city,
-    zipcode: zipcode,
-  };
-}
-const address1 = createAddress("39", "kashmir", "7532");
-console.log(address1);
-console.log("=======================>>>>");
-function Address(street, city, zipcode) {
-  this.street = street;
-  this.city = city;
-  this.zipcode = zipcode;
-}
-const addressMdassir = new Address("29", "karachi ", "7354");
-console.log(addressMudassir);
+// function createAddress(street, city, zipcode) {
+//   return {
+//     street: street,
+//     city: city,
+//     zipcode: zipcode,
+//   };
+// }
+// const address1 = createAddress("39", "kashmir", "7532");
+// console.log(address1);
+// console.log("=======================>>>>");
+// function Address(street, city, zipcode) {
+//   this.street = street;
+//   this.city = city;
+//   this.zipcode = zipcode;
+// }
+// const address = new Address("29", "karachi ", "7354");
+// console.log(address);
 // // ======================= constructor function ========================
 // function Circle(radius) {
 //   this.radius = radius;
@@ -382,12 +382,11 @@ console.log(addressMudassir);
 // circle3.getCircumference();
 // circle3.getDiameter();
 // circle3.getRadius();
-// ============================================================
-// console.log(this.sides * this.sideLength);
+// ============================================================//
 // function Square(length) {
 //   this.length = length;
 //   this.getSquarearea = function () {
-//     console.log(" Squarearea is ===>", this.length * 4);
+//     console.log(" Squarearea is ===>", this.length * 2);
 //   };
 //   this.getSquare = function () {
 //     console.log(" Square is ===> ", this.length);
@@ -402,7 +401,21 @@ console.log(addressMudassir);
 // console.log("===============");
 // console.log("Square2");
 // square2.getSquarearea();
-// square2.getSquare();
+// 0square2.getSquare();
+
+// let circle = {
+//   radiubrsbss: 1,
+//   radiuvfwbsers: 1,
+//   radiawfus: 1,
+//   radiubes: 1,
+//   radiusav: 1,
+//   radiues: 1,
+//   rvbaebpwadius: 1,
+// };
+// console.log(circle);
+
+// circle = {};
+// console.log(circle);
 
 // function Student(name, last, age, clas) {
 //   this.firstName = name;
@@ -416,7 +429,44 @@ console.log(addressMudassir);
 // console.log(student2);
 // const student3 = new Student(" hassan  ", " ali", 20, 10);
 // console.log(student3);
+// =====================================================>>>>
 
+// ===================dynamic nature of Object====================//
+
+// let circle = {
+//   radius: 1,
+// };
+// circle.color = " yellow";
+// circle.name = "gola";
+// delete circle.name;
+// console.log(circle);
+
+// ====================enumerating properties of an Object=====================
+
+// const circle = {
+//   radius: 1,
+//   draw() {
+//     console.log("draw");
+//   },
+// };
+// for (let key in circle) console.log(key, circle[key]);
+
+// for (let key of Object.keys(circle)) console.log(key, circle[key]);
+
+// for (let key of Object.entries(circle)) console.log(key);
+
+// if ("radius" in circle) console.log("yes");
+
+// =============== cloning an object =================
+
+const person = {
+  name: "mudassir",
+  age: 19,
+};
+const another = {};
+for (let key in person) another[key] = person[key]; // cloning   2 trha se hi ga aik ye he //
+// const another = Object.assign({ city: " karachi" }, person); cloning // or aik ye he //
+console.log(another);
 // -=========================================grade ///
 // let score = 10;
 // let grade = "THIS IS YOUR GRADE ";
