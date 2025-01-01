@@ -1,4 +1,3 @@
-// let y = x > 5 && x < 15;
 // console.log(y);
 // let x = 10;
 
@@ -7,6 +6,7 @@
 // console.log(x);
 
 // let x = 1;
+// let y = x > 5 && x < 15;
 // let y = x !== 2;
 // console.log(y);
 
@@ -459,14 +459,219 @@
 
 // =============== cloning an object =================
 
-const person = {
-  name: "mudassir",
-  age: 19,
-};
-const another = {};
-for (let key in person) another[key] = person[key]; // cloning   2 trha se hi ga aik ye he //
-// const another = Object.assign({ city: " karachi" }, person); cloning // or aik ye he //
-console.log(another);
+// const person = {
+//   name: "mudassir",
+//   age: 19,
+//   city: " karachi ",
+//   gender: "men",
+// };
+// const another = {};
+
+// for (let key in person) another[key] = person[key]; // cloning   2 trha se hoga aik ye he //
+// const another = Object.assign({ city: "karachi" }, person); cloning or aik ye he //
+
+// const another = { ...person };
+
+// console.log(person);
+
+// // <====================garbage collecion======================>
+// const circle = {};
+// console.log(circle);
+// //  <==================== String ====================>
+// const message = "how are you my friend ";
+// console.log(message.split(""));
+
+// <=================template literals==================>
+// Object { },
+// Boolean true  false
+// String ""
+// // template  ``
+// const name = "ALI";
+// const message = `
+//   Hi ${name} ${47}
+
+//    thank you for joining my mailling list
+
+//    regards
+//    MUDASSIR,`;
+// console.log(message);
+// const message2 =
+//   "\n  Hi muzamli,\n\n   thank you for joining my mailling list \n   \n   \n   regards\n   mudassir,";
+// console.log(message2);
+
+// <=======================exercise 1 address object=======================>
+// let address = {
+//   street: "A",
+//   city: "B",
+//   zipcode: "c",
+// };
+// function showAdderss() {
+//   for (let key in address) console.log(key, address[key]);
+// }
+// showAdderss();
+
+// <===================exercise 2 fuctory and constructor function===================>
+
+// function showAdderss(street, city, zipcode) {
+//   return {
+//     street,
+//     city,
+//     zipcode,
+//   };
+// }
+// const address1 = showAdderss("A", "B", "c");
+// const address2 = showAdderss("23", "karachi", 87543);
+// const address3 = showAdderss("64", "lahore", 987);
+
+// console.log(address1);
+// console.log("<=============================>");
+// console.log(address2);
+// console.log("<=============================>");
+// // console.log(address3);
+
+// function Address(street, city, zipcode) {
+//   this.street = street;
+//   this.city = city;
+//   this.zipcode = zipcode;
+// }
+// const address1 = new Address("10", "islamabad", 3874);
+// const address2 = new Address("10", "lahore", 3874);
+// const address3 = new Address("10", "karachi", 5676);
+// console.log(address1);
+// console.log("<==========================>");
+// console.log(address2);
+// console.log("<==========================>");
+// console.log(address3);
+// console.log("<==========================>");
+
+// <========================exercise 3 object equality========================>
+
+// function Address(street, city, zipcode) {
+//   this.street = street;
+//   this.city = city;
+//   this.zipcode = zipcode;
+// }
+// const address1 = new Address("10", "islamabad", 3874);
+// const address2 = new Address("10", "islamabad", 3874);
+// const address3 = address1;
+// console.log(areEqual(address1, address2));
+// console.log(areSame(address1, address2));
+// console.log(areSame(address1, address3));
+// function areEqual(address1, address2) {
+//   return (
+//     address1.street === address2.street &&
+//     address1.city === address2.city &&
+//     address1.zipcode === address2.zipcode
+//   );
+// }
+// function areSame(address1, address2) {
+//   return address1 === address2;
+// }
+
+// function Person(name, age, clas) {
+//   this.name = name;
+//   this.age = age;
+//   this.clas = clas;
+// }
+// const person1 = new Person("mudassir", 19, 12);
+// const person2 = new Person("mudassir", 19, 12);
+// const person3 = person1;
+// function areEqual(person1, person2) {
+//   return (
+//     person1.name === person2.name &&
+//     person1.age === person2.age &&
+//     person1.clas === person2.clas
+//   );
+// }
+// function areSame(person1, person2) {
+//   return person1 === person2;
+// }
+
+// console.log(areEqual(person1, person2));
+// console.log(areSame(person1, person2));
+// console.log(areEqual(person3, person1));
+
+// <=================exercise 4 blog post object===================>
+
+// let post = {
+//   litle: "A",
+//   body: "B",
+//   author: "C",
+//   views: 10,
+//   comment: [
+//     { author: "A", body: "B" },
+//     { author: "K", body: "M" },
+//   ],
+//   isLive: true,
+// };
+// console.log(post);
+
+// let post = {
+//   title: "ABC",
+//   body: "CD",
+//   author: "DF",
+//   veiw: 12,
+//   comment: [
+//     { title: "ABC", body: "CD" },
+//     { title: "ABC", body: "CD" },
+//   ],
+//   isLive: true,
+// };
+// console.log(post);
+
+// //  ======================constructor function======================
+
+// let post = new Post(" A", "B", "C");
+// let post1 = new Post("K ", "H", "g");
+// function Post(title, body, author) {
+//   (this.title = title),
+//     (this.body = body),
+//     (this.author = author),
+//     (this.view = 0);
+//   this.comment = [" love you "];
+//   this.live = true;
+// }
+// console.log(post);
+// console.log("=======================");
+// console.log(post1);
+
+// =====================price range Object=====================
+// let priceRange = [
+//   { lable: "$", tooitios: "Inexpensive", minPerPerson: 0, maxPerPerson: 10 },
+//   { lable: "$$", tooitios: "Moderator", minPerPerson: 11, maxPerPerson: 20 },
+//   { lable: "$$$", tooitios: "Expensive", minPerPerson: 21, maxPerPerson: 50 },
+// ];
+// let rasturant = [{ averagePerPerson: 5 }];
+// console.log(priceRange);
+
+// ==================== Array ====================
+
+// adding new element
+// finding element
+// removing element
+// slitting arrays
+// combining arrays
+
+// <<<<<<<<<<=============adding element==============>>>>>>>>>
+
+// const number = [3, 4];
+
+// // END
+// number.push(5, 6, 7, 8, 9, 10);
+// //Beginning
+// number.unshift(1, 2);
+// //Middle
+// number.splice(10, 0, "BAS YAHI TAK NUMBERS HAI");
+
+// console.log(number);\
+
+// ===================finding element==================
+
+const numbers = [1, 2, 3, 4, 5];
+
+console.log(numbers.indexOf(3));
+console.log(numbers.lastIndexOf(6));
+console.log(numbers.includes(1));
 // -=========================================grade ///
 // let score = 10;
 // let grade = "THIS IS YOUR GRADE ";
