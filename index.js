@@ -670,8 +670,20 @@
 const numbers = [1, 2, 3, 4, 5];
 
 console.log(numbers.indexOf(3));
-console.log(numbers.lastIndexOf(6));
+console.log(numbers.lastIndexOf(5));
 console.log(numbers.includes(1));
+
+showStars(5);
+function showStars(rows) {
+  for (let i = 1; i <= rows; i++) {
+    let pattern = "";
+    for (let j = 0; j < i; j++) {
+      pattern = "*";
+    }
+    console.log(pattern);
+  }
+}
+
 // -=========================================grade ///
 // let score = 10;
 // let grade = "THIS IS YOUR GRADE ";
