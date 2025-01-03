@@ -261,13 +261,12 @@
 //   return true;
 // }
 
-// showPrime(40);
+// showPrime(20);
 // function showPrime(limit) {
-//   for (let numbe) console.log(isPrime(number));
-//   }r = 2; number <= limit; number++) {
+//   for (let number = 2; number <= limit; number++)
 //     if (isPrime(number)) console.log(number);
-//   }
 // }
+
 // function isPrime(number) {
 //   for (let factor = 2; factor < number; factor++) {
 //     if (number % factor === 0) return false;
@@ -527,7 +526,7 @@
 // console.log("<=============================>");
 // console.log(address2);
 // console.log("<=============================>");
-// // console.log(address3);
+// console.log(address3);
 
 // function Address(street, city, zipcode) {
 //   this.street = street;
@@ -665,24 +664,28 @@
 
 // console.log(number);\
 
-// ===================finding element==================
+//<< ===================finding element  primitive typs==================>>
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
-console.log(numbers.indexOf(3));
-console.log(numbers.lastIndexOf(5));
-console.log(numbers.includes(1));
+// console.log(numbers.indexOf(1));
+// console.log(numbers.lastIndexOf(5));
+// console.log(numbers.indexOf(1) != -1);
+// console.log(numbers.includes(1));
+// console.log(numbers);
 
-showStars(5);
-function showStars(rows) {
-  for (let i = 1; i <= rows; i++) {
-    let pattern = "";
-    for (let j = 0; j < i; j++) {
-      pattern = "*";
-    }
-    console.log(pattern);
-  }
-}
+// <<<===================finding element reference types===================>>>
+
+const person = [
+  { name1: "mudassir", age: 19, subject: "Math" },
+
+  { name2: "ali", age: 15, subject: "English" },
+];
+console.log(person);
+console.log("<<<==================>>>");
+
+const result = person.find((name) => name.name2 === "ali");
+console.log(result);
 
 // -=========================================grade ///
 // let score = 10;
