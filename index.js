@@ -676,18 +676,258 @@
 
 // <<<===================finding element reference types===================>>>
 
-const person = [
-  { name1: "mudassir", age: 19, subject: "Math" },
+// const person = [
+//   { name1: "mudassir", age: 19, subject: "Math" },
 
-  { name2: "ali", age: 15, subject: "English" },
-];
-console.log(person);
-console.log("<<<==================>>>");
+//   { name2: "ali", age: 15, subject: "English" },
+// ];
+// console.log(person);
+// console.log("<<<==================>>>");
 
-const result = person.find((name) => name.name2 === "ali");
-console.log(result);
+// const result = person.find((name) => name.name2 === "ali");
+// console.log(result);
+// <<<================arrow function================>>
 
-// -=========================================grade ///
+// const courses = [
+//   { name: "ali", id: 20 },
+//   { name: "hasan", id: 10 },
+// ];
+// const course = courses.find((courses) => courses.name === "hasan");
+// console.log(course);
+
+// const name = ["ali", "asad", "mudassie", "hasan"];
+
+// delete name[2];
+// console.log(name);
+// <<==================removing element====================>>
+// const numbers = [11, 22, 33, 44, 55, 66];
+
+// const last = numbers.pop(); //END
+// console.log(numbers);
+// console.log(last);
+// const first = numbers.shift(); //BEGINNING
+// console.log(first, numbers);
+// const spliced = numbers.splice(1, 2); //MIDDLE
+// console.log(numbers, spliced);
+
+// <<==================emptying an array==================>>
+
+// let numbers = [1, 2, 3, 4, 5];
+// let another = numbers;
+// first solution
+// numbers = [];
+// console.log(another);
+// console.log(numbers);
+// // second solution
+// numbers.length = 0;
+// console.log(numbers);
+// // //third solutin
+// numbers.splice(0, numbers.length);
+// console.log(numbers);
+
+// // //fourth solution
+// while (numbers.length > 0) numbers.pop();
+// console.log(numbers);
+
+// <<=================combining and slicing array=================>>
+// const first = [{ id: 2 }];
+// const second = [5, 6, 7, 8];
+// const combine = first.concat(second);
+// const slice = combine.slice(6);
+// console.log(combine);
+// console.log(slice);
+// <<===============the sperad oprator================>>
+
+// const first = [1, 2, 3, 4];
+// const second = [5, 6, 7, 8];
+// const combine = [...first, "A", ...second, "B"];
+// const copy = [...combine];
+// console.log(copy);
+// console.log("<<===========================>>");
+// console.log(combine);
+// <<===========itrating an array============>>
+
+// const numbers = [1, 2, 3, 4];
+
+// for (let number of numbers) console.log(number);
+
+// // numbers.forEach(function (number) {
+// //   console.log(number);
+// // });
+// numbers.forEach((number, index) => console.log(number, index));
+
+//  <<==============joining array===============>>
+
+// const numbers = [1, 2, 3];
+// const joined = numbers.join("<>");
+// console.log(joined);
+
+// const message = "This is my first split code ";
+// const add = message.split("");
+// console.log(add);
+// const combines = add.join("_");
+// console.log(combines);
+
+// const name = "mudassir ali asim hassan";
+// const parts = name.split(" ");
+// console.log(parts);
+// console.log("<<<==============================>>>");
+// const joined = parts.join(" __ ");
+// console.log(joined);
+// // <<<================ sorting and reverse array =================>>>
+// const numbers = [4, 24, 3, 1, 54];
+// numbers.sort((a, b) => a - b);
+// console.log(numbers);
+
+// numbers.reverse();
+// console.log(numbers);
+
+// const alpha = "poweulsdvcn";
+// const linewise = alpha.split("");
+// console.log(linewise);
+// const combine = linewise.sort();
+// console.log(combine);
+
+// const course = [
+//   { id: 1, name: "Node" },
+//   { id: 2, name: "javascript" },
+// ];
+// course.sort(function (a, b) {
+//   if (a.name < b.name) return -1;
+//   if (a.name > b.name) return 1;
+//   return 0;
+// });
+// console.log(course);    //kuch khas samj nahi aya bad ai kisi se samj lio//
+
+// <<<===================testing the element of an array ===================>>>
+// <<<============= every and some element ================>>> sai he ye
+
+// const numbers = [-1, 2, 3, 4];
+// const allPositive = numbers.every(function (value) {
+//   return value >= 0;
+// });
+// console.log(numbers, allPositive);
+// const numbers = [-1, 2, 3];
+// const atleastOnePositive = numbers.some(function (value) {
+//   return value >= 0;
+// });
+// console.log(atleastOnePositive);
+
+// <<<===================filtering an array==================>>>
+
+// const numbers = [1, -1, 2, 3, 4];
+// const filtered = numbers.filter((value) => value >= 2);
+// console.log(numbers, filtered);
+
+// // <<<===============mappin an array================>>>
+
+// const number = [1, 2, 3, 4, 5, 6];
+// const mapping = number.map((value) => value >= 3);
+
+// console.log(mapping);
+
+// let array = ["1", "2", "3", "4", "5", "6"];
+// let best = array.map((element) => +element);
+// console.log(best);
+
+// // <<<============= reducing an array ==============>>>>
+
+// const numbers = [1, 2, 3, 4];
+// const reduced = numbers.reduce((value) => value + value);
+// // console.log(accumulator);
+// // console.log(currentValue);
+// // return accumulator + currentValue;
+// console.log(numbers, reduced);
+// let items = [
+//   { name: "peach", price: 2 },
+//   { name: "mango", price: 4 },
+//   { name: "orange", price: 7 },
+// ];
+// let totalPrice = 0;
+
+// items.forEach((item) => {
+//   totalPrice += item.price;
+// });
+// console.log(totalPrice, items);
+
+// let items = [
+//   { name: "peach", price: 2 },
+//   { name: "mango", price: 4 },
+//   { name: "orange", price: 7 },
+// ];
+
+// const totalPrice = items.reduce((accumulator, item) => {
+//   return (accumulator += item.price);
+// }, 0);
+// console.log(totalPrice);
+
+// const numbers = [1, 2, 3, 4, 5];
+// let total = 0;
+// for (let i = 0; i < numbers.length; i++) {
+//   total = total + numbers[i];
+// }
+// console.log(total);
+
+// const numbers = [12, 23, 35, 47, 57];
+
+// let total = numbers.reduce((a, b) => {
+//   return (a += b);
+// });
+// console.log(total);
+
+// const numbers = [1, -1, 2, 3];
+// let sum = 0;
+// for (let n of numbers) sum += n;
+// console.log(sum);
+
+// let sum = numbers.reduce((accumulator, currentValue) => {
+//   return accumulator * currentValue;
+// });
+// console.log(sum, numbers);
+
+// <<<<==================exercise 1 array forom range ===================>>>>
+
+// let numbers = arrayFromRange(-10, -1);
+// function arrayFromRange(min, max) {
+//   const output = [];
+//   for (let i = min; i <= max; i++) output.push(i);
+//   return output;
+// }
+// console.log(numbers);
+
+// <<<====================exercise 2 includes======================>>>
+// let numbers = [1, 2, 3, 4, 5, 6];
+
+// function includes(array, searchElement) {
+//   for (let element of array) if (element === searchElement) return true;
+//   return false;
+// }
+
+// console.log(includes(numbers, 4));
+
+// //  <<<=============== exercise 3 except  ===============>>>
+
+// let numbers = [1, 2, 3, 4, 5, 1, 1, 2, 6];
+// function except(array, excluded) {
+//   let output = [];
+//   for (let element of array)
+//     if (!excluded.includes(element)) output.push(element);
+//   console.log(output);
+// }
+// except(numbers, [1, 2, 3]);
+
+// const numbers = [1, 5];
+// function arraySum(min, max) {
+//   const output = [];
+//   for (let i = min; i <= max; i++) output.push(i);
+//   return output;
+// }
+// console.log(arraySum(1, 5));
+
+//  <<<==============exercise 4 moving an element===============>>>
+
+// ====================== grade ===================>>>
+
 // let score = 10;
 // let grade = "THIS IS YOUR GRADE ";
 // if (score >= 90 && score <= 100) {
@@ -1229,3 +1469,5 @@ console.log(result);
 // }
 // if ("color" in circle);
 // console.log(" yes ");
+
+console.log(ali, baba, chalis, chor);
