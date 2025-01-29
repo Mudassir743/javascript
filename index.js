@@ -40,7 +40,7 @@
 // console.log(a);
 // console.log(b);
 
-//LOOPS AGAIN///============for loop is good buddy.//////////if (i % 2 !== 0)//////// even odd code
+//============for loop.//////////if (i % 2 !== 0)//////// even odd code
 // let c = a;
 
 // for (let i = 1; i <= 10; i++) {
@@ -666,12 +666,13 @@
 
 //<< ===================finding element  primitive typs==================>>
 
-// const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5, 1];
 
 // console.log(numbers.indexOf(1));
 // console.log(numbers.lastIndexOf(5));
 // console.log(numbers.indexOf(1) != -1);
 // console.log(numbers.includes(1));
+
 // console.log(numbers);
 
 // <<<===================finding element reference types===================>>>
@@ -837,7 +838,7 @@
 // // console.log(accumulator);
 // // console.log(currentValue);
 // // return accumulator + currentValue;
-// console.log(numbers, reduced);
+// console.log(reduced);
 // let items = [
 //   { name: "peach", price: 2 },
 //   { name: "mango", price: 4 },
@@ -895,7 +896,16 @@
 // }
 // console.log(numbers);
 
+// const numbers = [1, 5];
+// function arraySum(min, max) {
+//   const output = [];
+//   for (let i = min; i <= max; i++) output.push(i);
+//   return output;
+// }
+// console.log(arraySum(1, 5));
+
 // <<<====================exercise 2 includes======================>>>
+
 // let numbers = [1, 2, 3, 4, 5, 6];
 
 // function includes(array, searchElement) {
@@ -916,20 +926,123 @@
 // }
 // except(numbers, [1, 2, 3]);
 
-// const numbers = [1, 5];
-// function arraySum(min, max) {
-//   const output = [];
-//   for (let i = min; i <= max; i++) output.push(i);
+//  <<<==============exercise 4 moving an element===============>>> (rest opretor = ...array)
+
+// function move(array, index, offset) {
+//   const element = array.splice(index, 1)[0]; // 'b'
+//   array.splice(index + offset, 0, element);
+//   return array;
+// }
+
+// let numbers = ["a", "b", "c", "d"];
+// console.log(move(numbers, 1, 2));
+
+// const numbers = ["a", "b", "c", "d", "e"];
+
+// const output = move(numbers, 1, 2);
+// function move(array, index, offset) {
+//   const position = index + offset;
+//   if (position >= array.length || position < 0) {
+//     console.error(" invelid offset ");
+//     return;
+//   }
+
+//   const output = [...array];
+//   const element = output.splice(index, 1)[0];
+//   output.splice(position, 0, element);
 //   return output;
 // }
-// console.log(arraySum(1, 5));
+// console.log(output);
 
-//  <<<==============exercise 4 moving an element===============>>>
+// <<=============exercise 5 count occurrences==============>>
+
+// let numbers = [1, 2, 3, 3, 3, 3, 3, 5]; //  with for of loop  //
+
+// function countOccurrences(array, searchElement) {
+//   let count = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] === searchElement) count++;
+//   }
+//   return count;
+// }
+// console.log(countOccurrences( numbers, 3));
+// let count = countOccurrences(numbers, 2);
+// console.log(numbers, count);
+
+// let numbers = [1, 2, 3, 2, 4, 2, 5, 1]; //  with reduce method
+
+// function countOccurrences(array, searchElement) {
+//   return array.reduce((accumulator, current) => {
+//     let accurance = current === searchElement ? 1 : 0;
+//     console.log(accumulator, current, searchElement);
+
+//     return accumulator + accurance;
+//   }, 0);
+// }
+
+// console.log(countOccurrences(numbers, 2));
+
+// <<<================= exercise 6 getmax ==================>>>
+
+// let numbers = [1, 2, 3, 4, 5]; // max //
+
+// function getMax(array) {
+//   if (array.length === 0) return undefined;
+//   let max = array[0];
+//   for (let i = 0; i < array.length; i++) if (array[i] > max) max = array[i];
+//   return max;
+// }
+
+// console.log(getMax([1, 2, 3, 4, 5]), numbers); // max //
+
+// let numbers = [1, 2, 3, 4, 5]; // min //
+
+// function getMax(array) {
+//   if (array.length === 0) return undefined;
+//   let min = Infinity;
+//   for (let i = 0; i < array.length; i++) if (array[i] < min) min = array[i];
+//   return min;
+// }
+// console.log(getMax([2, 3, 4])); // min //
+
+// let numbers = [1, 2, 3, 4, 5];
+// function getMax(array) {
+//   if (array.length === 0) return undefined;
+//   else return array.reduce((a, b) => (a > b ? a : b));
+// }
+// console.log(getMax(numbers));
+
+// let numbers = [1, 2, 3, 4, 5, 35, 536, 754, 856];
+// function getMax(array) {
+//   if (array.length === 0) return undefined;
+//   else return array.reduce((a, b) => (a > b ? a : b));
+// }
+
+// console.log(getMax(numbers));
+
+// let numbers = [11, 12, 322, 4, 5];
+// console.log(Math.max(...numbers));
+
+// <<<=============== exercise 7 movies ===============>>>
+
+let movies = [
+  { title: "A", year: 2018, rating: 4.5 },
+  { title: "B", year: 2018, rating: 4.7 },
+  { title: "C", year: 2018, rating: 3 },
+  { title: "D", year: 2017, rating: 4.5 },
+];
+let title = movies
+  .filter((movie) => movie.year === 2018 && movie.rating >= 4)
+  .sort((a, b) => a.rating - b.rating)
+
+  .reverse();
+// .map((movie) => movie.rating);
+console.log(title);
 
 // ====================== grade ===================>>>
 
 // let score = 10;
-// let grade = "THIS IS YOUR GRADE ";
+// let grade = "THIS IS yOUR GRADE ";
 // if (score >= 90 && score <= 100) {
 //   console.log(grade, "A");
 // } else if (score >= 80 && score <= 89) {
@@ -1469,5 +1582,3 @@
 // }
 // if ("color" in circle);
 // console.log(" yes ");
-
-console.log(ali, baba, chalis, chor);
