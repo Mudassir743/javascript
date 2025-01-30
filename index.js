@@ -886,7 +886,7 @@
 // });
 // console.log(sum, numbers);
 
-// <<<<==================exercise 1 array forom range ===================>>>>
+// <<<<==================exercise 1 array from range ===================>>>>
 
 // let numbers = arrayFromRange(-10, -1);
 // function arrayFromRange(min, max) {
@@ -1025,19 +1025,85 @@
 
 // <<<=============== exercise 7 movies ===============>>>
 
-let movies = [
-  { title: "A", year: 2018, rating: 4.5 },
-  { title: "B", year: 2018, rating: 4.7 },
-  { title: "C", year: 2018, rating: 3 },
-  { title: "D", year: 2017, rating: 4.5 },
-];
-let title = movies
-  .filter((movie) => movie.year === 2018 && movie.rating >= 4)
-  .sort((a, b) => a.rating - b.rating)
+// let movies = [
+//   { title: "A", year: 2018, rating: 4.5 },
+//   { title: "B", year: 2018, rating: 4.7 },
+//   { title: "C", year: 2018, rating: 3 },
+//   { title: "D", year: 2017, rating: 4.5 },
+// ];
+// let title = movies
+//   .filter((movie) => movie.year === 2018 && movie.rating >= 4)
+//   .sort((a, b) => a.rating - b.rating)
+//   // .reverse()
 
-  .reverse();
-// .map((movie) => movie.rating);
-console.log(title);
+//   .map((movie) => movie.title);
+// console.log(title);
+
+// <<<================== function declaration vs expression ==================>>>
+
+// function declaration //
+
+// function walk() {
+//   console.log("walk");
+// }
+// walk();
+
+//// ====================>>>>>>>
+
+// function expression //
+
+// let run = function () {
+//   console.log("run");
+// };
+// run();
+
+// let move = run;
+// // console.log("move");?
+// move();
+// ////=======================>>>>>>
+
+// // arrow function //
+
+// let pdf = (number) => number * number;
+// console.log(pdf(3));
+
+// <<<<<=============== arguments =================>>>>>
+
+// function sum(a, b) {
+
+//   console.log(arguments);
+//   return a + b;
+// }
+// console.log(sum(1, 2, 3, 4, 5));
+
+// function sum() {
+//   // let total = 0;
+//   // for (let val of arguments) {
+//   //   total = total + val;
+//   // }
+//   // return total;
+
+//   // return
+//   //
+
+//   return Object.values(arguments).reduce((a, b) => a + b);
+// }
+
+// console.log(sum(4, 5, 6, 7, 8));
+
+// <<<================= the rest operator ===================>>>
+
+// function sum(...arge) {
+//   console.log(arge);
+// }
+// sum(1, 2, 3, 4, 5, 10);
+
+function discount(discount, ...price) {
+  let total = price.reduce((a, b) => a + b);
+  // return (total = total * (discount / 100)); // kitna  percent discount mila he //
+  return total * (1 - discount); // kitna discount mila he
+}
+console.log(discount(0.1, 400, 600));
 
 // ====================== grade ===================>>>
 
@@ -1055,7 +1121,7 @@ console.log(title);
 //   grade, "F";
 // // }
 // let i = 100;
-// for (let i = 0; i <= 100; i++) {
+// for (let i = 0; i <d= 100; i++) {
 //   if (i % 2 === 0) console.log(i, "EVEN ");
 //   // else console.log(i, "odd");
 // }
