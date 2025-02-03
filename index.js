@@ -1098,14 +1098,141 @@
 // }
 // sum(1, 2, 3, 4, 5, 10);
 
-function discount(discount, ...price) {
-  let total = price.reduce((a, b) => a + b);
-  // return (total = total * (discount / 100)); // kitna  percent discount mila he //
-  return total * (1 - discount); // kitna discount mila he
-}
-console.log(discount(0.1, 400, 600));
+// function discount(discount, ...price) {
+//   let total = price.reduce((a, b) => a + b);
+//   // return (total = total * (discount / 100)); // kitna  percent discount mila he //
+//   return total * (1 - discount); // kitna discount mila he
+// }
+// console.log(discount(0.1, 400, 600));
 
-// ====================== grade ===================>>>
+// <<<================== defoult parameters ===================>>>
+
+// function interest(principal, rate = 3.5, year) {
+//   return ((principal * rate) / 100) * year;
+// }
+// console.log(interest(10000, undefined, 5));
+
+// <<<================== getters and setters ==================>>>
+
+// let person = {
+//   firstName: "mudassir  ",
+//   lastNmae: "ahmed",
+// };
+
+// function fulName() {
+//   return ` THIS IS FULL NAME = ${person.firstName} ${person.lastNmae}`;
+// }
+// console.log(fulName(), person);
+
+// let person = {
+//   firstName: "mudassir",
+//   lastName: "ahmed",
+
+//   get fulName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+//   set fulName(name) {
+//     let [first, last] = name.split(" ");
+
+//     this.firstName = first;
+//     this.lastName = last;
+//   },
+// };
+
+// person.fulName = "ali khan ";
+// console.log(person.firstName);
+
+///mosh
+
+// let person = {
+//   firstName: "mudassir",
+//   lastName: "ahmed",
+
+//   get fullName() {
+//     return `${this.firstName}  ${this.lastName}`;
+//   },
+
+//   set fullName(name) {
+//     let parts = name.split(/\s+/);
+//     this.firstName = parts[0];
+//     this.lastName = parts[1];
+//   },
+// };
+
+// person.fullName = "ali baba  ";
+// console.log(person);
+
+// <<<=================== try and catch ..... errer handling======================>>
+
+// let person = {
+//   firstName: "mudassir",
+//   lastName: "ahmed",
+
+//   // get fullName() {
+//   //   return `${person.firstName} ${person.lastName}`;
+//   // },
+
+//   set fullName(value) {
+//     if (typeof value !== " string ") {
+//       throw new Error(" value is not a string");
+//     }
+//     const part = value.split(" ");
+//     this.firstName = part[0];
+//     this.lastName = part[1];
+//   },
+// };
+// try {
+//   person.fullName = " ";
+// } catch (e) {
+//   alert(e);
+// }
+
+// person.fullName = "ali baba";
+// console.log(person);
+
+//  <<================= local and global scope ===================>>
+
+// let globalVariable = "I am global!"; // Global scope
+
+// function showGlobal() {
+//   console.log(globalVariable); // Accessing global variable inside function
+// }
+// showGlobal(); // Output: I am global!
+
+// function localScopeExample() {
+//   let localVariable = "I am local!"; // Local scope
+//   console.log(localVariable); // This will work inside the function
+// }
+
+// localScopeExample(); // Output: I am local!
+
+// console.log(localVariable); // Error: localVariable is not defined
+
+// <<<============ var and let ==============>>>
+{
+  let x = 10;
+  var y = 20;
+}
+console.log(y);
+
+console.log(a);  // undefined
+var a = 5;
+
+console.log(b);  // ReferenceError: Cannot access 'b' before initialization
+let b = 5;
+
+// function check() {
+//   for (var i = 0; i < 5; i++) {
+//     console.log(i);
+//   }
+//   console.log(i);
+// }
+// check();  
+
+   
+<<<================ the this keyword =================>>>
+
+// ====================== grade ===================>>>   
 
 // let score = 10;
 // let grade = "THIS IS yOUR GRADE ";
@@ -1140,7 +1267,7 @@ console.log(discount(0.1, 400, 600));
 // let number = 26;
 // if (number >= 40) {
 //   console.log("you are best");
-// } else if (number >= 30) {
+// } else if (number >= '3'0) {
 //   console.log("you are good ");
 // } else if (number >= 25) {
 //   console.log("you are ok ");
@@ -1641,6 +1768,7 @@ console.log(discount(0.1, 400, 600));
 // }
 // for (let key of Object.keys(circle)) {
 //   console.log(key);
+
 // }
 
 // for (let entry of Object.entries(circle)) {
