@@ -254,8 +254,7 @@
 //   }
 // }
 // function isPrime(number) {
-//   for (let factor = 2; factor <
-//     number; factor++) {
+//   for (let factor = 2; factor < number; factor++) {
 //     if (number % factor === 0) return false;
 //   }
 //   return true;
@@ -666,12 +665,12 @@
 
 //<< ===================finding element  primitive typs==================>>
 
-// const numbers = [1, 2, 3, 4, 5, 1];
-
-// console.log(numbers.indexOf(1));
-// console.log(numbers.lastIndexOf(5));
-// console.log(numbers.indexOf(1) != -1);
-// console.log(numbers.includes(1));
+// const numbers = [1, 2, 3, 4, 5];
+// let k = 4;
+// // console.log(numbers.indexOf(k));
+// // console.log(numbers.lastIndexOf(5));
+// // console.log(numbers.indexOf(4) == 3);
+// console.log(numbers.includes(6));
 
 // console.log(numbers);
 
@@ -701,15 +700,15 @@
 // delete name[2];
 // console.log(name);
 // <<==================removing element====================>>
-// const numbers = [11, 22, 33, 44, 55, 66];
+const numbers = [11, 22, 33, 44, 55, 66];
 
 // const last = numbers.pop(); //END
 // console.log(numbers);
 // console.log(last);
 // const first = numbers.shift(); //BEGINNING
 // console.log(first, numbers);
-// const spliced = numbers.splice(1, 2); //MIDDLE
-// console.log(numbers, spliced);
+const spliced = numbers.splice(4); //MIDDLE
+console.log(numbers, spliced);
 
 // <<==================emptying an array==================>>
 
@@ -731,7 +730,7 @@
 // console.log(numbers);
 
 // <<=================combining and slicing array=================>>
-// const first = [{ id: 2 }];
+// const first = [{ id:   2 }];
 // const second = [5, 6, 7, 8];
 // const combine = first.concat(second);
 // const slice = combine.slice(6);
@@ -778,6 +777,7 @@
 // // <<<================ sorting and reverse array =================>>>
 // const numbers = [4, 24, 3, 1, 54];
 // numbers.sort((a, b) => a - b);
+
 // console.log(numbers);
 
 // numbers.reverse();
@@ -865,7 +865,7 @@
 // const numbers = [1, 2, 3, 4, 5];
 // let total = 0;
 // for (let i = 0; i < numbers.length; i++) {
-//   total = total + numbers[i];
+//   total += numbers[i];
 // }
 // console.log(total);
 
@@ -917,7 +917,7 @@
 
 // //  <<<=============== exercise 3 except  ===============>>>
 
-// let numbers = [1, 2, 3, 4, 5, 1, 1, 2, 6];
+// let number = [1, 2, 3, 4, 5, 1, 1, 2, 6];
 // function except(array, excluded) {
 //   let output = [];
 //   for (let element of array)
@@ -989,21 +989,25 @@
 // function getMax(array) {
 //   if (array.length === 0) return undefined;
 //   let max = array[0];
-//   for (let i = 0; i < array.length; i++) if (array[i] > max) max = array[i];
-//   return max;
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] > max) max = array[i];
+//     return max;
+//   }
 // }
 
-// console.log(getMax([1, 2, 3, 4, 5]), numbers); // max //
+// console.log(getMax(max)); // max //
 
 // let numbers = [1, 2, 3, 4, 5]; // min //
 
-// function getMax(array) {
+// function getMin(array) {
 //   if (array.length === 0) return undefined;
 //   let min = Infinity;
-//   for (let i = 0; i < array.length; i++) if (array[i] < min) min = array[i];
-//   return min;
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] < min) min = array[i];
+//     return min;
+//   }
 // }
-// console.log(getMax([2, 3, 4])); // min //
+// console.log(getMin(numbers)); // min //
 
 // let numbers = [1, 2, 3, 4, 5];
 // function getMax(array) {
@@ -1209,17 +1213,17 @@
 // console.log(localVariable); // Error: localVariable is not defined
 
 // <<<============ var and let ==============>>>
-{
-  let x = 10;
-  var y = 20;
-}
-console.log(y);
+// {
+//   let x = 10;
+//   var y = 20;
+// }
+// console.log(y);
 
-console.log(a);  // undefined
-var a = 5;
+// console.log(a);  // undefined
+// var a = 5;
 
-console.log(b);  // ReferenceError: Cannot access 'b' before initialization
-let b = 5;
+// console.log(b);  // ReferenceError: Cannot access 'b' before initialization
+// let b = 5;
 
 // function check() {
 //   for (var i = 0; i < 5; i++) {
@@ -1227,12 +1231,24 @@ let b = 5;
 //   }
 //   console.log(i);
 // }
-// check();  
+// check();
 
-   
-<<<================ the this keyword =================>>>
+// <<<================ the this keyword =================>>>
 
-// ====================== grade ===================>>>   
+// let video = {
+//   title: "A",
+//   play() {
+//     console.log(this);
+//   },
+//   // video.play();
+// };
+// video.stop = function () {
+//   console.log(this);
+// };
+// video.stop();
+// // console.log(video);
+
+// ====================== grade ===================>>>
 
 // let score = 10;
 // let grade = "THIS IS yOUR GRADE ";
@@ -1357,7 +1373,7 @@ let b = 5;
 // };
 
 // for (let property in person) {
-//   console.log(property, person[property]);
+//   console.log(property);
 // }
 
 //  object[property] = obj ki property ki value
@@ -1378,7 +1394,7 @@ let b = 5;
 // break and continue//////
 // let i = 0;
 // while (i <= 10) {
-//   // if (i === 5) break;
+//   if (i === 5) break;
 //   if (i % 2 === 0) {
 //     i++;
 //     continue;
