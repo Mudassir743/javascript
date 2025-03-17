@@ -411,7 +411,7 @@ console.log(getStudentsByActivity(students, "art"));
 // Create a function getStudentsByActivity(students, activity) that returns an array of students who participate in a specific activity.
 
 function getTopPerformer(students) {
-  let highestStudent = [];
+  let highestStudent = 0;
   let highestAverage = 0;
   for (let i = 0; i < students.length; i++) {
     let totalScore = 0;
@@ -432,5 +432,27 @@ getTopPerformer(students);
 
 // Create a function getTopPerformer(students) that returns the student with the highest average score.
 
-function addActivity(students, studentId, newActivity) {}
+function addActivity(students, studentId, newActivity) {
+  for (let i = 0; i < students.length; i++) {
+    if (students[i].id === studentId) {
+      let alreadyExists = 0;
+      for (let j = 0; j < students[i].activities.length; j++) {
+        if (students[i].activities[i] === newActivity) {
+          alreadyExists++;
+        }
+      }
+      if (alreadyExists === 0) {
+        students[i].activities.push(newActivity);
+      }
+      break;
+    }
+  }
+}
+addActivity(students, 1, "drama");
+addActivity(students, 2, "music");
+addActivity(students, 3, "criket");
+addActivity(students, 4, "pubg");
+addActivity(students, 5, "film");
+console.log(students);
+
 // Create a function addActivity(students, studentId, newActivity) that adds a new activity to a specific student and returns the updated array. Make sure not to add duplicate activities.
