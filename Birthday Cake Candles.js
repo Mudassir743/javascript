@@ -140,7 +140,7 @@
 // Create a function updateScore(students, studentId, examIndex, newScore) that updates a student’s score for a specific exam and returns the updated array.
 // Feel free to test your functions with the provided data and see if they work correctly!
 
-// <<<<<<<<<<<<<<<<========================================================================================>>>>>>>>>>>>>>>>>>
+// // <<<<<<<<<<<<<<<<========================================================================================>>>>>>>>>>>>>>>>>>
 
 // let students = [
 //   {
@@ -355,6 +355,61 @@ let students = [
   },
 ];
 
+function getAverageScore(students) {
+  for (let i = 0; i < students.length; i++) {
+    let total = 0;
+    for (let j = 0; j < students[i].scores.length; j++) {
+      total += students[i].scores[j];
+    }
+    let average = total / students[i].scores.length;
+    console.log(students[i].name + ": " + average);
+  }
+}
+function getAverageScore(students) {
+  let total = 0;
+  for (let i = 0; i < students.scores.length; i++) {
+    total += students.scores[i];
+  }
+  return total / students.scores.length;
+}
+
+// for (let i = 0; i < students.length; i++) {
+//   console.log(students[i].name + " : " + getAverageScore(students[i]));
+// }
+console.log(getAverageScore(students[0]));
+console.log(getAverageScore(students[2]));
+console.log(getAverageScore(students[3]));
+console.log(getAverageScore(students[4]));
+// Create a function getAverageScore(student) that takes a student object and returns their average score.
+
+function getStudentsByGrade(students, grade) {
+  let grades = [];
+
+  for (let i = 0; i < students.length; i++) {
+    if (students[i].grade === grade) {
+      grades.push(grade);
+    }
+  }
+  console.log(grades);
+}
+getStudentsByGrade(students, 10);
+// // Create a function getStudentsByGrade(students, grade) that returns an array of students in a specific grade.
+
+function getStudentsByActivity(students, activity) {
+  let specificActivities = [];
+  for (let i = 0; i < students.length; i++) {
+    for (let j = 0; j < students[i].activities.length; j++) {
+      if (students[i].activities[j] === activity) {
+        specificActivities.push(students[i]);
+      }
+    }
+  }
+
+  return specificActivities;
+}
+console.log(getStudentsByActivity(students, "art"));
+// Create a function getStudentsByActivity(students, activity) that returns an array of students who participate in a specific activity.
+
 function getTopPerformer(students) {
   let highestStudent = [];
   let highestAverage = 0;
@@ -373,18 +428,9 @@ function getTopPerformer(students) {
   console.log("THIS IS HIGHEST STUDENT", highestStudent);
   console.log("THIS IS HIGHEST AVERAGE", highestAverage);
 }
-function getStudentsByActivity(students, activity) {
-  let specificActivities = [];
-  for (let i = 0; i < students.length; i++) {
-    for (let j = 0; j < students[i].activities.length; j++) {
-      if (students[i].activities[j] === activity) {
-        specificActivities.push(students[i]);
-      }
-    }
-  }
-
-  return specificActivities;
-}
 getTopPerformer(students);
 
 // Create a function getTopPerformer(students) that returns the student with the highest average score.
+
+function addActivity(students, studentId, newActivity) {}
+// Create a function addActivity(students, studentId, newActivity) that adds a new activity to a specific student and returns the updated array. Make sure not to add duplicate activities.
