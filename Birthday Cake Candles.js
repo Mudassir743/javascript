@@ -467,7 +467,7 @@ function updateScore(students, studentId, examIndex, newScore) {
     }
   }
 }
-updateScore(students, 5, 3, 100);
 console.log(students);
+updateScore(students, 5, 3, 100);
 
 // Create a function updateScore(students, studentId, examIndex, newScore) that updates a student’s score for a specific exam and returns the updated array.
