@@ -432,42 +432,42 @@ let students = [
 
 // Create a function getTopPerformer(students) that returns the student with the highest average score.
 
-function addActivity(students, studentId, newActivity) {
-  for (let i = 0; i < students.length; i++) {
-    if (students[i].id === studentId) {
-      let alreadyExists = 0;
-      for (let j = 0; j < students[i].activities.length; j++) {
-        if (students[i].activities[j] === newActivity) {
-          alreadyExists++;
-        }
-      }
-      if (alreadyExists === 0) {
-        students[i].activities.push(newActivity);
-      }
-      break;
-    }
-  }
-}
-addActivity(students, 1, "drama");
-addActivity(students, 2, "music");
-addActivity(students, 3, "cricket");
-addActivity(students, 4, "pubg");
-addActivity(students, 5, "hoky");
-console.log(students);
+// function addActivity(students, studentId, newActivity) {
+//   for (let i = 0; i < students.length; i++) {
+//     if (students[i].id === studentId) {
+//       let alreadyExists = 0;
+//       for (let j = 0; j < students[i].activities.length; j++) {
+//         if (students[i].activities[j] === newActivity) {
+//           alreadyExists++;
+//         }
+//       }
+//       if (alreadyExists === 0) {
+//         students[i].activities.push(newActivity);
+//       }
+//       break;
+//     }
+//   }
+// }
+// addActivity(students, 1, "drama");
+// addActivity(students, 2, "music");
+// addActivity(students, 3, "cricket");
+// addActivity(students, 4, "pubg");
+// addActivity(students, 5, "hoky");
+// console.log(students);
 
 // Create a function addActivity(students, studentId, newActivity) that adds a new activity to a specific student and returns the updated array. Make sure not to add duplicate activities.
 
-function updateScore(students, studentId, examIndex, newScore) {
-  for (let i = 0; i < students.length; i++) {
-    if (students[i].id === studentId) {
-      if (examIndex >= 0 && examIndex < students[i].scores.length) {
-        students[i].scores[examIndex] = newScore;
-      }
-      break;
-    }
-  }
-}
-console.log(students);
-updateScore(students, 5, 3, 100);
+// function updateScore(students, studentId, examIndex, newScore) {
+//   for (let i = 0; i < students.length; i++) {
+//     if (students[i].id === studentId) {
+//       if (examIndex >= 0 && examIndex < students[i].scores.length) {
+//         students[i].scores[examIndex] = newScore;
+//       }
+//       break;
+//     }
+//   }
+//   return students;
+// }
+// console.log(updateScore(students, 5, 3, 100));
 
 // Create a function updateScore(students, studentId, examIndex, newScore) that updates a student’s score for a specific exam and returns the updated array.
