@@ -50,10 +50,14 @@ function getAverageScore(students) {
       total += students[i].scores[j];
     }
     let average = total / students[i].scores.length;
+
     console.log(students[i].name + ": " + average);
   }
 }
 getAverageScore(students);
+
+console.log("<<<======================================================>>>");
+
 function getStudentsByGrade(students, grade) {
   let grades = [];
 
@@ -62,9 +66,11 @@ function getStudentsByGrade(students, grade) {
       grades.push(students[i]);
     }
   }
-  console.log(grades);
+  console.log("SPESIFIC GRADES", grades);
 }
 getStudentsByGrade(students, 10);
+
+console.log("<<<======================================================>>>");
 
 function getStudentsByActivity(students, activity) {
   let specificActivities = [];
@@ -76,9 +82,11 @@ function getStudentsByActivity(students, activity) {
     }
   }
 
-  return specificActivities;
+  console.log(" SPESIFIC ACTIVITIES", specificActivities);
 }
 console.log(getStudentsByActivity(students, "art"));
+
+console.log("<<<======================================================>>>");
 
 function getTopPerformer(students) {
   let highestStudent = 0;
@@ -98,29 +106,36 @@ function getTopPerformer(students) {
   console.log("THIS IS HIGHEST STUDENT", highestStudent);
   console.log("THIS IS HIGHEST AVERAGE", highestAverage);
 }
-console.log(getTopPerformer(students));
+getTopPerformer(students);
+
+console.log("<<<======================================================>>>");
 
 function addActivity(students, studentId, newActivity) {
   for (let i = 0; i < students.length; i++) {
     if (students[i].id === studentId) {
-      let alreadyExists = 0;
+      let alreadyExists = false;
       for (let j = 0; j < students[i].activities.length; j++) {
         if (students[i].activities[j] === newActivity) {
-          alreadyExists++;
+          alreadyExists = true;
+          break;
         }
       }
-      if (alreadyExists === 0) {
+      if (!alreadyExists) {
         students[i].activities.push(newActivity);
       }
     }
   }
   return students;
 }
-console.log(addActivity(students, 1, "drama"));
-console.log(addActivity(students, 2, "music"));
-console.log(addActivity(students, 3, "cricket"));
-console.log(addActivity(students, 4, "pubg"));
-console.log(addActivity(students, 5, "hoky"));
+addActivity(students, 1, "drama");
+addActivity(students, 2, "music");
+addActivity(students, 3, "cricket");
+addActivity(students, 4, "pubg");
+addActivity(students, 5, "hoky");
+
+console.log("ADD ACTIVIY", students);
+
+console.log("<<<======================================================>>>");
 
 function updateScore(students, studentId, examIndex, newScore) {
   for (let i = 0; i < students.length; i++) {
@@ -133,4 +148,5 @@ function updateScore(students, studentId, examIndex, newScore) {
   return students;
 }
 
-console.log(updateScore(students, 5, 3, 100));
+updateScore(students, 5, 3, 100);
+console.log("CHANGE SCORE", students);
