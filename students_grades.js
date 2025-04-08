@@ -50,8 +50,7 @@ function addStudent(students, student) {
 addStudent(students, student, student1);
 
 function addGrade(students, studentName, grade) {
-  let student =
-    students.find((student) => student.name === studentName) || 
+  let student = students.find((student) => student.name === studentName);
 
   if (student) {
     student.grades.push(grade);
