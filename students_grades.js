@@ -65,7 +65,6 @@ addGrade(students, "Bob", 94);
 console.log(students);
 
 function getAverageGrade(students, studentName) {
-  // let student = students.find((student) => student.name === studentName);
   let student;
   for (let i = 0; i < students.length; i++) {
     if (students[i].name === studentName) {
@@ -80,7 +79,28 @@ function getAverageGrade(students, studentName) {
   for (let j = 0; j < student.grades.length; j++) {
     total += student.grades[j];
   }
-  // console.log("TOTAL", total);
+  console.log("TOTAL", total);
+  let average = total / student.grades.length;
+  return average;
+}
+
+console.log(getAverageGrade(students, "Alice"));
+console.log(getAverageGrade(students, "Bob"));
+console.log(getAverageGrade(students, "jerry"));
+
+console.log("<<<=============================>>>");
+
+function getAverageGrade(students, studentName) {
+  let student = students.find((student) => student.name === studentName);
+  if (!student) {
+    return "STUDENT NOT FOUND";
+  }
+  console.log("STUTENT", student);
+  let total = student.grades.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+  );
+  console.log("TOTAL", total);
+
   let average = total / student.grades.length;
   return average;
 }
