@@ -19,4 +19,4 @@ function getMoneySpent(keyboards, drives, b) {
   }
   return max_budget;
 }
-console.log(getMoneySpent([40, 50, 60], [5, 8, 12], 60));
+console.log(getMoneySpent([60, 60, 60], [5, 8, 12], 60));
