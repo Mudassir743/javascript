@@ -24,8 +24,16 @@ function bigSorting(unsorted) {
 
   console.log(arr);
 }
+bigSorting(["8, 1, 2, 100"]);
 
-bigSorting([8, 1, 2, 100]);
+function bigSorting(unsorted) {
+  let result = unsorted.sort((a, b) => a - b);
+
+  return result;
+}
+
+console.log(bigSorting(["8", "1", "2", "100", "100000000000000000000", "2"]));
+
 // bigSorting([
 //   8,
 //   1,
