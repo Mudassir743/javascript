@@ -24,3 +24,11 @@ function findDigits(n) {
   return find_count;
 }
 console.log(findDigits(12345));
+
+let str = ["12345"];
+let count = 0;
+for (let i = 0; i < str.length; i++) {
+  let check = Number(str[i]);
+  if (check !== 0 && str % check === 0) count++;
+}
+console.log(count);
