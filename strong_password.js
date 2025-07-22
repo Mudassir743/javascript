@@ -6,7 +6,6 @@ function minimumNumber(n, password) {
 
   let = numbers = "0123456789";
   let = lower_case = "abcdefghijklmnopqrstuvwxyz";
-  let = upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let = special_characters = "!@#$%^&*()-+";
 
   for (let i = 0; i < password.length; i++) {

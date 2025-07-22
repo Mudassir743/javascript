@@ -1,9 +1,7 @@
 function twoStrings(s1, s2) {
   for (let i = 0; i < s1.length; i++) {
-    for (let j = 0; j < s2.length; j++) {
-      //   console.log(s2[j]);
-      if (s1[i] == s2[j]) return "YES";
-    }
+    //   console.log(s2[j]);
+    if (s1[i] == s2[j]) return "YES";
   }
   return "NO";
 }

@@ -27,7 +27,5 @@ function superReducedString(s) {
     if (freq[str] % 2 !== 0) string += str;
     freq[str] = 0;
   }
-  if (string === "") return "Empty String";
-  else return string;
 }
 console.log(superReducedString("aaabccddd"));
