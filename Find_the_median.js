@@ -8,4 +8,3 @@ function findMedian(arr) {
   else return arr[mmid - 1] + arr[mid];
 }
 console.log(findMedian([12, 10, 5, 7, 3]));
-apple;

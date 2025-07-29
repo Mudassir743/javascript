@@ -5,7 +5,7 @@ function repeatedString(s, n) {
   for (let i = 0; i < n; i++) {
     result += s[i % s.length];
   }
-  console.log(" REPEATED VALUE==>>", BigInt(result));
+  // console.log(" REPEATED VALUE==>>", BigInt(result));
   for (let i = 0; i < result.length; i++) {
     if (result[i] === "a") count++;
   }

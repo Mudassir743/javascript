@@ -23,7 +23,7 @@ function anagrame(s) {
     let countInS2 = freqS2[char] || 0;
     if (countInS1 > countInS2) change += countInS1 - countInS2;
   }
-  console.log(change);
+  return change;
 }
 console.log(anagrame("aaabbb"));
 
